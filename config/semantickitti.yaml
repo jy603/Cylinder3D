@@ -41,7 +41,11 @@ dataset_params:
 ###################
 ## Data_loader options
 train_data_loader:
+<<<<<<< HEAD
   data_path: "/content/drive/MyDrive/Datasets/dataset/sequences/"
+=======
+  data_path: "/data/dataset/semantic_kitti/data_semkitti/dataset/sequences/"
+>>>>>>> origin/master
   imageset: "train"
   return_ref: True
   batch_size: 2
@@ -49,7 +53,11 @@ train_data_loader:
   num_workers: 4
 
 val_data_loader:
+<<<<<<< HEAD
   data_path: "/content/drive/MyDrive/Datasets/dataset/sequences/"
+=======
+  data_path: "/data/dataset/semantic_kitti/data_semkitti/dataset/sequences/"
+>>>>>>> origin/master
   imageset: "val"
   return_ref: True
   batch_size: 1
@@ -62,7 +70,13 @@ val_data_loader:
 train_params:
   model_load_path: "./model_load_dir/model_load.pt"
   model_save_path: "./model_save_dir/model_save.pt"
+<<<<<<< HEAD
   checkpoint_every_n_steps: 4540  #100
   max_num_epochs: 20    #3
   eval_every_n_steps: 4540 #100
+=======
+  checkpoint_every_n_steps: 4599
+  max_num_epochs: 40
+  eval_every_n_steps: 4599
+>>>>>>> origin/master
   learning_rate: 0.001

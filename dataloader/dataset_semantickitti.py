@@ -93,7 +93,11 @@ class voxel_dataset(data.Dataset):
         intervals = crop_range / (cur_grid_size - 1)
         if (intervals == 0).any(): print("Zero interval!")
 
+<<<<<<< HEAD
         grid_ind = (np.floor((np.clip(xyz, min_bound, max_bound) - min_bound) / intervals)).astype(int)
+=======
+        grid_ind = (np.floor((np.clip(xyz, min_bound, max_bound) - min_bound) / intervals)).astype(np.int)
+>>>>>>> origin/master
 
         # process voxel position
         voxel_position = np.zeros(self.grid_size, dtype=np.float32)
@@ -244,7 +248,11 @@ class cylinder_dataset(data.Dataset):
         intervals = crop_range / (cur_grid_size - 1)
 
         if (intervals == 0).any(): print("Zero interval!")
+<<<<<<< HEAD
         grid_ind = (np.floor((np.clip(xyz_pol, min_bound, max_bound) - min_bound) / intervals)).astype(int)
+=======
+        grid_ind = (np.floor((np.clip(xyz_pol, min_bound, max_bound) - min_bound) / intervals)).astype(np.int)
+>>>>>>> origin/master
 
         voxel_position = np.zeros(self.grid_size, dtype=np.float32)
         dim_array = np.ones(len(self.grid_size) + 1, int)
@@ -344,7 +352,11 @@ class polar_dataset(data.Dataset):
         intervals = crop_range / (cur_grid_size - 1)
 
         if (intervals == 0).any(): print("Zero interval!")
+<<<<<<< HEAD
         grid_ind = (np.floor((np.clip(xyz_pol, min_bound, max_bound) - min_bound) / intervals)).astype(int)
+=======
+        grid_ind = (np.floor((np.clip(xyz_pol, min_bound, max_bound) - min_bound) / intervals)).astype(np.int)
+>>>>>>> origin/master
 
         voxel_position = np.zeros(self.grid_size, dtype=np.float32)
         dim_array = np.ones(len(self.grid_size) + 1, int)
@@ -395,7 +407,11 @@ def nb_process_label(processed_label, sorted_label_voxel_pair):
 
 def collate_fn_BEV(data):
     data2stack = np.stack([d[0] for d in data]).astype(np.float32)
+<<<<<<< HEAD
     label2stack = np.stack([d[1] for d in data]).astype(int)
+=======
+    label2stack = np.stack([d[1] for d in data]).astype(np.int)
+>>>>>>> origin/master
     grid_ind_stack = [d[2] for d in data]
     point_label = [d[3] for d in data]
     xyz = [d[4] for d in data]
@@ -404,7 +420,11 @@ def collate_fn_BEV(data):
 
 def collate_fn_BEV_test(data):
     data2stack = np.stack([d[0] for d in data]).astype(np.float32)
+<<<<<<< HEAD
     label2stack = np.stack([d[1] for d in data]).astype(int)
+=======
+    label2stack = np.stack([d[1] for d in data]).astype(np.int)
+>>>>>>> origin/master
     grid_ind_stack = [d[2] for d in data]
     point_label = [d[3] for d in data]
     xyz = [d[4] for d in data]
