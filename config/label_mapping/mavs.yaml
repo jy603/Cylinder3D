@@ -1,0 +1,103 @@
+# This file is covered by the LICENSE file in the root of this project.
+labels: 
+  1: "rough trail"
+  2: "low vegetation"
+  3: "high vegetation"
+  4: "smooth trail"
+  5: "obstacle"
+  6: "vehicle"
+  7: "dust"
+  8: "stop_sign"
+  9: "yield_sign"
+  10: "building"
+  11: "pedestrian"
+  12: "fence"
+  13: "pothole"
+
+color_map: # bgr
+  1: [ 0.929, 0.490, 0.192 ]
+  2: [ 0.220, 0.341, 0.137 ]
+  3: [ 0.572, 0.816, 0.314 ]
+  4: [ 1.0, 0.753, 0.0 ]
+  5: [ 1.0, 0.0, 0.0 ]
+  6: [ 0.439, 0.188, 0.627 ]
+  7: [ 0.439, 0.502, 0.565 ]
+  8: [ 0.5, 0.0, 0.0 ]
+  9: [ 0.85, 0.85, 0.0 ]
+  10: [ 1.0, 1.0, 1.0 ]
+  11: [ 1.0, 1.0, 1.0 ]
+  12: [ 0.63, 0.79, 0.22 ]
+  13: [ 0.2, 0.4, 0.6 ]
+
+content: # as a ratio with the total number of points
+  1: 0.5627825169819891
+  2: 0.04074703116289633
+  3: 0.2901041630821536
+  4: 0.0863475001892623
+  5: 0.02001878858369867
+  6: 0.0
+  7: 0.0
+  8: 0.0
+  9: 0.0
+  10: 0.0
+  11: 0.0
+  12: 0.0
+  13: 0.0
+
+
+# classes that are indistinguishable from single scan or inconsistent in
+# ground truth are mapped to their closest equivalent
+learning_map:
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 0
+  7: 0 
+  8: 0
+  9: 0
+  10: 0
+  11: 0
+  12: 0
+  13: 0 
+
+learning_map_inv: # inverse of previous map
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  #6: 6 
+  #7: 7 
+  #8: 8
+  #9: 9
+  #10: 10
+  #11: 11
+  #12: 12
+  #13: 13 
+
+learning_ignore: # Ignore classes
+  1: False     # "rough trail"
+  2: False     # "low vegetation"
+  3: False     # "high vegetation"
+  4: False     # "smooth trail"
+  5: False     # "obstacle"
+  6: True     # "vehicle"
+  7: True     # "dust"
+  8: True     # "stop_sign"
+  9: True     # "yield_sign"
+  10: True    # "building"
+  11: True    # "pedestrian"
+  12: True    # "fence"
+  13: True    # "pothole"
+
+split: # sequence numbers
+  train:
+    - 2
+  valid:
+    - 3
+  test:
+    - 1
+

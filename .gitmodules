@@ -1,0 +1,7 @@
+[submodule "Cylinder3D"]
+	path = Cylinder3D
+	url = https://github.com/xinge008/Cylinder3D
+[submodule "spconv"]
+	path = spconv
+	url = https://github.com/traveller59/spconv
+	branch = v1.2.1
