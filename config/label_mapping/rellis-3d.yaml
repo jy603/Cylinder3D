@@ -124,7 +124,7 @@ learning_ignore: # Ignore classes
   13: False 
   14: False
 
-split: # sequence numbers
+split: # modified split
   train:
     - 0
     - 1
@@ -134,3 +134,12 @@ split: # sequence numbers
   test:
     - 4
 
+'''
+split: # original split from the RELLIS-3D paper
+  train:
+    - 0
+  valid:
+    - 1
+  test:
+    - 2
+'''

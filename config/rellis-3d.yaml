@@ -46,15 +46,15 @@ train_data_loader:
   return_ref: True
   batch_size: 2
   shuffle: True
-  num_workers: 12
+  num_workers: 8
 
 val_data_loader:
   data_path: "/media/jinhee/Extreme SSD/Datasets/GIT/Self-supervised-learning-for-Off-road-Autonomous-Driving/raw_datasets/RELLIS-3D/[Ouster] RELLIS-3D"
   imageset: "val"
   return_ref: True
-  batch_size: 1
+  batch_size: 2
   shuffle: True
-  num_workers: 12
+  num_workers: 8
 
 
 ###################
@@ -63,6 +63,6 @@ train_params:
   model_load_path: "./model_load_dir/"
   model_save_path: "/media/jinhee/Extreme SSD/SPIE/packages/Cylinder3D/model_save_dir/(rellis-3d)_model_save.pt"
   checkpoint_every_n_steps: 2329  #100
-  max_num_epochs: 4   #3
+  max_num_epochs: 40   #3
   eval_every_n_steps: 2329  #100
   learning_rate: 0.001
